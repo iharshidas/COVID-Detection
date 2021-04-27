@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Detection</title>
+</head>  
+<body>
+    
+    <div class="main-page">
+        <div class="page-content">
+            <h2>Upload the X-ray Image</h2>
+    <form method="POST" action="/" enctype="multipart/form-data">
+         <input type="file" name="userfile" placeholder="Upload Image">
+         <input type="submit">
+    </form>
+
+    {% if result_out %}
+          <br>
+         <h2>Predicted Result :{{result_out['Result']}}</h2>
+
+    {% endif %}
+        </div>
+    </div>
+</body>  
+</html>
+
